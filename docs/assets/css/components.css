@@ -39,13 +39,19 @@
 }
 
 .hero-social a {
-  text-decoration: underline;
-  text-decoration-color: rgba(79, 131, 96, 0.32);
-  text-underline-offset: 4px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid rgba(123, 190, 138, 0.28);
+  border-radius: 999px;
+  background: rgba(123, 190, 138, 0.13);
+  text-decoration: none;
 }
 
 .hero-social a:hover {
-  color: var(--sun);
+  background: rgba(123, 190, 138, 0.2);
+  color: var(--deep-green);
 }
 
 .hero-helper {
@@ -453,8 +459,22 @@
   line-height: 2;
 }
 
-.instagram-copy .button {
-  margin-top: 8px;
+.instagram-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.instagram-button {
+  background: var(--text);
+  color: var(--white);
+  box-shadow: 0 10px 22px rgba(60, 60, 60, 0.1);
+}
+
+.instagram-button:hover,
+.instagram-button:focus-visible {
+  box-shadow: 0 14px 28px rgba(60, 60, 60, 0.14);
 }
 
 .instagram-panel {
@@ -662,6 +682,54 @@
     white-space: normal;
   }
 
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-actions {
+    order: 3;
+  }
+
+  .hero-social {
+    order: 4;
+  }
+
+  .hero-lead {
+    order: 5;
+  }
+
+  .hero-helper {
+    order: 6;
+  }
+
+  .hero-support {
+    order: 7;
+  }
+
+  .hero h1 {
+    margin-bottom: 10px;
+    font-size: clamp(30px, 9vw, 39px);
+    line-height: 1.28;
+  }
+
+  .hero-lead {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .hero-helper,
+  .hero-support {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .hero-social {
+    margin-top: 10px;
+  }
+
   .slots-section h2,
   #slots h2 {
     font-size: clamp(2rem, 8vw, 2.7rem);
@@ -748,6 +816,11 @@
     grid-template-columns: 1fr;
   }
 
+  .instagram-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .insta-card {
     display: grid;
     grid-template-columns: 96px 1fr;
@@ -771,8 +844,14 @@
 
 @media (max-width: 640px) {
   .hero-actions,
-  .button {
+  .hero-actions .button,
+  .instagram-actions .button {
     width: 100%;
+  }
+
+  .hero-social a {
+    width: 100%;
+    justify-content: center;
   }
 
   .guide-grid,

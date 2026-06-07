@@ -52,6 +52,10 @@
   background: rgba(123, 190, 138, 0.15);
 }
 
+.global-nav .nav-instagram {
+  color: var(--deep-green);
+}
+
 .global-nav .nav-cta {
   margin-left: 4px;
   background: var(--text);
@@ -232,16 +236,7 @@
 }
 
 .hero-scroll-cue {
-  position: absolute;
-  left: 50%;
-  bottom: 18px;
-  z-index: 4;
-  width: 1px;
-  height: 32px;
-  transform: translateX(-50%);
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(232, 216, 195, 0.72);
+  display: none;
 }
 
 .hero-scroll-cue::after {
@@ -446,16 +441,20 @@
     justify-content: flex-start;
   }
 
+  .global-nav .nav-instagram {
+    background: rgba(123, 190, 138, 0.13);
+  }
+
   .hero {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
     min-height: auto;
     padding-top: clamp(34px, 8vw, 58px);
   }
 
   .hero-world {
     order: -1;
-    min-height: 360px;
+    min-height: 320px;
   }
 
   .hero-mark-device {
@@ -496,16 +495,16 @@
   }
 
   .hero {
-    gap: 18px;
-    padding: 24px 20px 44px;
+    gap: 12px;
+    padding: 20px 20px 36px;
   }
 
   .hero-world {
-    min-height: 292px;
+    min-height: 248px;
   }
 
   .hero-mark-device {
-    width: min(100%, 350px);
+    width: min(100%, 304px);
   }
 
   .hero-mark-inner {
@@ -524,7 +523,7 @@
   }
 
   .hero-info-strip {
-    padding-top: 24px;
+    padding-top: 22px;
     padding-bottom: 30px;
   }
 
