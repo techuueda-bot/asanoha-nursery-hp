@@ -6,8 +6,9 @@ html {
   scroll-behavior: smooth;
 }
 
-section[id] {
-  scroll-margin-top: 92px;
+section[id],
+[id="day"] {
+  scroll-margin-top: 116px;
 }
 
 body {
@@ -81,4 +82,11 @@ p {
 
 ::selection {
   background: rgba(244, 162, 89, 0.3);
+}
+
+@media (max-width: 980px) {
+  section[id],
+  [id="day"] {
+    scroll-margin-top: 96px;
+  }
 }
