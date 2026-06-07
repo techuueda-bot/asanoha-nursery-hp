@@ -163,8 +163,12 @@
 
 .guide-card.reveal,
 .slot-card.reveal,
+.trust-card.reveal,
+.local-card.reveal,
 .slots-next.reveal,
 .photo-card.reveal,
+.insta-card.reveal,
+.faq-item.reveal,
 .contact-form.reveal {
   opacity: 0;
   transform: translateX(-38px) translateY(8px);
@@ -173,8 +177,12 @@
 
 .guide-card.reveal.is-visible,
 .slot-card.reveal.is-visible,
+.trust-card.reveal.is-visible,
+.local-card.reveal.is-visible,
 .slots-next.reveal.is-visible,
 .photo-card.reveal.is-visible,
+.insta-card.reveal.is-visible,
+.faq-item.reveal.is-visible,
 .contact-form.reveal.is-visible {
   opacity: 1;
   transform: translateX(0) translateY(0);
@@ -183,18 +191,23 @@
 
 .guide-card.reveal:nth-child(2).is-visible,
 .slot-card.reveal:nth-child(2).is-visible,
+.trust-card.reveal:nth-child(2).is-visible,
+.local-card.reveal:nth-child(2).is-visible,
 .photo-card.reveal:nth-child(2).is-visible {
   animation-delay: 80ms;
 }
 
 .guide-card.reveal:nth-child(3).is-visible,
 .slot-card.reveal:nth-child(3).is-visible,
+.trust-card.reveal:nth-child(3).is-visible,
+.local-card.reveal:nth-child(3).is-visible,
 .photo-card.reveal:nth-child(3).is-visible {
   animation-delay: 150ms;
 }
 
 .guide-card.reveal:nth-child(4).is-visible,
 .slot-card.reveal:nth-child(4).is-visible,
+.trust-card.reveal:nth-child(4).is-visible,
 .photo-card.reveal:nth-child(4).is-visible {
   animation-delay: 220ms;
 }

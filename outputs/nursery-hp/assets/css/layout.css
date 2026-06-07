@@ -258,8 +258,13 @@
 .hero-info-strip,
 .news-section,
 .guide-section,
+.safety-section,
+.staff-section,
 .slots-section,
 .daily-section,
+.access-section,
+.instagram-section,
+.faq-section,
 .quiet-cta {
   padding: clamp(62px, 8vw, 104px) max(22px, calc((100vw - var(--max)) / 2));
 }
@@ -267,7 +272,7 @@
 .hero-info-strip {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   padding-top: clamp(22px, 3.2vw, 36px);
   padding-bottom: clamp(28px, 4vw, 46px);
@@ -321,6 +326,21 @@
   background: var(--bg);
 }
 
+.safety-section {
+  border-top: 1px solid rgba(233, 221, 208, 0.72);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(169, 214, 229, 0.16), transparent 30%),
+    rgba(255, 255, 255, 0.5);
+}
+
+.staff-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  background: var(--bg);
+}
+
 .slots-section {
   border-top: 1px solid rgba(233, 221, 208, 0.72);
   background: rgba(255, 255, 255, 0.42);
@@ -328,6 +348,25 @@
 
 .daily-section {
   background: #fffdf9;
+}
+
+.access-section {
+  border-top: 1px solid rgba(233, 221, 208, 0.72);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.instagram-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  background:
+    radial-gradient(circle at 16% 24%, rgba(244, 162, 89, 0.12), transparent 30%),
+    #fffdf9;
+}
+
+.faq-section {
+  background: var(--bg);
 }
 
 .quiet-cta {
@@ -433,6 +472,11 @@
     gap: 10px;
   }
 
+  .staff-section,
+  .instagram-section {
+    grid-template-columns: 1fr;
+  }
+
   .info-illustration {
     top: -8px;
     right: 20px;
@@ -509,10 +553,20 @@
   .hero-info-strip,
   .news-section,
   .guide-section,
+  .safety-section,
+  .staff-section,
   .slots-section,
   .daily-section,
+  .access-section,
+  .instagram-section,
+  .faq-section,
   .quiet-cta {
     padding-inline: 20px;
+  }
+
+  .staff-section,
+  .instagram-section {
+    grid-template-columns: 1fr;
   }
 
   .slots-section {
