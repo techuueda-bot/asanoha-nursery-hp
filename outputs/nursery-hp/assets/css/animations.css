@@ -41,6 +41,10 @@
   animation-delay: 1.32s;
 }
 
+.hero-proof-row.text-run-in {
+  animation-delay: 1.46s;
+}
+
 .hero-mark-inner {
   will-change: transform;
   animation:
@@ -174,6 +178,7 @@
 .staff-visual.reveal,
 .staff-message.reveal,
 .section-inner.reveal,
+.safety-check-panel.reveal,
 .trust-note.reveal,
 .slots-note.reveal {
   opacity: 0;
@@ -190,6 +195,7 @@
 .staff-visual.reveal.is-visible,
 .staff-message.reveal.is-visible,
 .section-inner.reveal.is-visible,
+.safety-check-panel.reveal.is-visible,
 .trust-note.reveal.is-visible,
 .slots-note.reveal.is-visible {
   opacity: 1;

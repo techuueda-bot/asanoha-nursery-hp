@@ -495,16 +495,16 @@
   }
 
   .hero {
-    gap: 12px;
-    padding: 20px 20px 36px;
+    gap: 8px;
+    padding: 18px 20px 32px;
   }
 
   .hero-world {
-    min-height: 248px;
+    min-height: 226px;
   }
 
   .hero-mark-device {
-    width: min(100%, 304px);
+    width: min(100%, 282px);
   }
 
   .hero-mark-inner {

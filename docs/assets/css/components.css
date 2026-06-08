@@ -32,7 +32,7 @@
 }
 
 .hero-social {
-  margin-top: 14px;
+  margin-top: 12px;
   color: var(--deep-green);
   font-size: 13px;
   font-weight: 800;
@@ -42,10 +42,10 @@
   display: inline-flex;
   align-items: center;
   min-height: 36px;
-  padding: 7px 12px;
-  border: 1px solid rgba(123, 190, 138, 0.28);
+  padding: 8px 14px;
+  border: 1px solid rgba(123, 190, 138, 0.34);
   border-radius: 999px;
-  background: rgba(123, 190, 138, 0.13);
+  background: rgba(123, 190, 138, 0.17);
   text-decoration: none;
 }
 
@@ -59,6 +59,26 @@
   color: var(--deep-brown);
   font-size: clamp(15px, 1.6vw, 17px);
   font-weight: 700;
+}
+
+.hero-proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.hero-proof-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  border: 1px solid rgba(233, 221, 208, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: #5a544e;
+  font-size: 12px;
+  font-weight: 800;
 }
 
 .copy-line {
@@ -206,12 +226,6 @@
   gap: 16px;
 }
 
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
 .local-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -246,7 +260,6 @@
   box-shadow: 0 10px 24px rgba(111, 93, 76, 0.05);
 }
 
-.trust-card,
 .local-card {
   min-width: 0;
   padding: 24px;
@@ -254,10 +267,6 @@
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.72);
   box-shadow: 0 10px 24px rgba(111, 93, 76, 0.05);
-}
-
-.trust-card {
-  min-height: 236px;
 }
 
 .local-card {
@@ -272,7 +281,6 @@
   font-weight: 900;
 }
 
-.trust-card span,
 .local-card span {
   display: inline-flex;
   margin-bottom: 18px;
@@ -286,7 +294,6 @@
   font-size: 18px;
 }
 
-.trust-card h3,
 .local-card h3 {
   margin-bottom: 9px;
   font-size: 18px;
@@ -299,12 +306,76 @@
   font-size: 14px;
 }
 
-.trust-card p,
 .local-card p {
   margin-bottom: 0;
   color: #514b45;
   font-size: 14px;
   line-height: 1.85;
+}
+
+.safety-check-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid rgba(233, 221, 208, 0.92);
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(242, 248, 241, 0.74)),
+    radial-gradient(circle at 90% 0%, rgba(169, 214, 229, 0.18), transparent 32%);
+}
+
+.safety-check-copy h3 {
+  margin-bottom: 14px;
+  font-size: clamp(23px, 3.4vw, 36px);
+  line-height: 1.45;
+}
+
+.safety-check-copy p {
+  margin-bottom: 0;
+  color: #514b45;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.safety-check-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.safety-check-list li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  align-items: center;
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 1px solid rgba(233, 221, 208, 0.78);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.66);
+  color: #514b45;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.safety-check-list span {
+  display: inline-flex;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(123, 190, 138, 0.14);
+  color: var(--deep-green);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.safety-check-panel .button {
+  grid-column: 2;
+  justify-self: start;
 }
 
 .trust-note {
@@ -478,18 +549,77 @@
 }
 
 .instagram-panel {
+  padding: 18px;
+  border: 1px solid rgba(233, 221, 208, 0.9);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 18px 44px rgba(111, 93, 76, 0.07);
+}
+
+.instagram-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.instagram-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 68% 28%, #fff 0 8%, transparent 9%),
+    radial-gradient(circle at 50% 50%, transparent 0 31%, #fff 32% 42%, transparent 43%),
+    linear-gradient(135deg, #f4a259, #de6ba3 52%, #7bbe8a);
+}
+
+.instagram-account p {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.instagram-account small {
+  color: #6c655e;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.story-row {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 16px;
+  overflow: auto;
+}
+
+.story-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid rgba(123, 190, 138, 0.24);
+  border-radius: 999px;
+  background: rgba(123, 190, 138, 0.1);
+  color: var(--deep-green);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.insta-feed {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .insta-card {
   min-width: 0;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid rgba(233, 221, 208, 0.9);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0 12px 28px rgba(111, 93, 76, 0.06);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
 }
 
 .insta-card img {
@@ -500,11 +630,20 @@
 }
 
 .insta-card p {
-  margin: 10px 2px 2px;
+  margin: 9px 2px 2px;
   color: #514b45;
   font-size: 13px;
   font-weight: 800;
   line-height: 1.6;
+}
+
+.insta-card small {
+  display: block;
+  margin: 4px 2px 2px;
+  color: rgba(60, 60, 60, 0.58);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .faq-list {
@@ -658,7 +797,6 @@
 @media (max-width: 980px) {
   .guide-grid,
   .slots-grid,
-  .trust-grid,
   .local-grid,
   .photo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -668,8 +806,12 @@
     aspect-ratio: 1 / 0.68;
   }
 
-  .instagram-panel {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .safety-check-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .safety-check-panel .button {
+    grid-column: auto;
   }
 
   .hero-actions {
@@ -691,20 +833,21 @@
     order: 3;
   }
 
-  .hero-social {
+  .hero-social,
+  .hero-proof-row {
     order: 4;
   }
 
   .hero-lead {
-    order: 5;
-  }
-
-  .hero-helper {
     order: 6;
   }
 
-  .hero-support {
+  .hero-helper {
     order: 7;
+  }
+
+  .hero-support {
+    order: 8;
   }
 
   .hero h1 {
@@ -757,18 +900,15 @@
     gap: 22px;
   }
 
-  .trust-grid,
   .local-grid {
     gap: 22px;
   }
 
-  .trust-card,
   .local-card {
     padding: 28px 24px;
     border-radius: 18px;
   }
 
-  .trust-card p,
   .local-card p {
     font-size: 0.98rem;
     line-height: 1.9;
@@ -812,12 +952,12 @@
     border-radius: 13px;
   }
 
-  .instagram-panel {
+  .instagram-actions {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
-  .instagram-actions {
-    display: grid;
+  .insta-feed {
     grid-template-columns: 1fr;
   }
 
@@ -834,6 +974,10 @@
 
   .insta-card p {
     margin: 0;
+  }
+
+  .insta-card small {
+    margin: 2px 0 0;
   }
 
   .news-list li {
@@ -856,7 +1000,6 @@
 
   .guide-grid,
   .slots-grid,
-  .trust-grid,
   .local-grid,
   .photo-grid {
     grid-template-columns: 1fr;
@@ -864,10 +1007,26 @@
 
   .guide-card,
   .slot-card,
-  .trust-card,
   .local-card {
     min-height: auto;
     padding: 22px;
+  }
+
+  .safety-check-panel {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .safety-check-list li {
+    grid-template-columns: 62px 1fr;
+    gap: 10px;
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+
+  .instagram-panel {
+    padding: 14px;
+    border-radius: 20px;
   }
 
   .slot-card {
