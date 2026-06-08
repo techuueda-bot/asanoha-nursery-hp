@@ -91,9 +91,17 @@ const startPhotoRotation = (windowElement, interval, offset = 0) => {
   }, interval + offset);
 };
 
-if (prefersReducedMotion) {
+const supportsReveal = "IntersectionObserver" in window;
+
+if (prefersReducedMotion || !supportsReveal) {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
 } else {
+  // Only opt into the hidden reveal start-state now that JS is running and the
+  // observer is about to drive it. If this script never executes (JS disabled,
+  // failed to load) or the browser lacks IntersectionObserver, `.reveal-on` is
+  // never set and the CSS fallback keeps all .reveal content visible.
+  document.documentElement.classList.add("reveal-on");
+
   heroPhotoWindows.forEach((windowElement, index) => {
     const interval = [5200][index] || 5200;
     const offset = [0][index] || 0;

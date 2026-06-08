@@ -273,6 +273,18 @@
   animation: cardListRunInFromLeft 780ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 
+/* Content visibility must not depend on JS. When JS is disabled, fails to load,
+   or IntersectionObserver is unsupported, script.js never adds `.reveal-on` to
+   <html>, so force every reveal element to its visible resting state instead of
+   leaving it at opacity:0. With `.reveal-on` present, the animated states above
+   apply as normal. */
+html:not(.reveal-on) .reveal,
+html:not(.reveal-on) .slots-next-list li {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
 .slots-next.is-visible .slots-next-list li:nth-child(1) {
   animation-delay: 180ms;
 }

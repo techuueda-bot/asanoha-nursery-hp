@@ -4,6 +4,11 @@
 
 html {
   scroll-behavior: smooth;
+  /* The reveal animations rest at translateX(-26~-38px); clip the resulting
+     horizontal overflow so it never produces a sideways scrollbar/blank gutter
+     on narrow viewports. `clip` (unlike `hidden`) does not create a scroll
+     container, so the sticky header keeps working. */
+  overflow-x: clip;
 }
 
 section[id],
