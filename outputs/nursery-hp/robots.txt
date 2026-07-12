@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techuueda-bot.github.io/asanoha-nursery-hp/sitemap.xml
